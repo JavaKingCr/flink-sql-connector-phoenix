@@ -4,6 +4,7 @@
 flink-sql-connector-phoenix 可以使用flink sql 读写phoenix
 ## 特点
 
+本文迭代1.17.2  原文：https://github.com/gaogao110/flink-sql-connector-phoenix.git
 
 ## 原理
 基于flink-sql-connector-jdbc改造而成
