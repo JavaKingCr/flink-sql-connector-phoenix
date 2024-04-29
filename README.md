@@ -7,7 +7,7 @@ flink-sql-connector-phoenix 可以使用flink sql 读写phoenix
 
 本文迭代flink 1.17.2 
 
-参考flink 1.14：https://github.com/gaogao110/flink-sql-connector-phoenix.git
+
 
 ## 原理
 基于flink-sql-connector-jdbc改造而成
@@ -101,3 +101,7 @@ phoenix-connector中拓展了
 `
 ## 使用方法
 执行mvn install flink-sql-connector-phoenix-1.17-1.0-SNAPSHOT.jar 放到flink lib 下
+
+
+##说明
+参考flink 1.14：https://github.com/gaogao110/flink-sql-connector-phoenix.git
