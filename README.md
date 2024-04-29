@@ -1,4 +1,4 @@
-# flink-sql-connector-phoenix
+# flink1.17.2-sql-connector-phoenix
 
 ## 简介
 flink-sql-connector-phoenix 可以使用flink sql 读写phoenix
