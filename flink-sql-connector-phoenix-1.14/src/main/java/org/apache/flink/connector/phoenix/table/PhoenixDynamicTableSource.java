@@ -116,7 +116,7 @@ public class PhoenixDynamicTableSource implements ScanTableSource, LookupTableSo
     }
     @Override
     public void applyProjection(int[][] projectedFields) {
-        this.physicalSchema = TableSchemaUtils.projectSchema(this.physicalSchema, projectedFields);
+        this.physicalSchema = TableSchemaUtilsImple.projectSchema(this.physicalSchema, projectedFields);
     }
 
     public DynamicTableSource copy() {

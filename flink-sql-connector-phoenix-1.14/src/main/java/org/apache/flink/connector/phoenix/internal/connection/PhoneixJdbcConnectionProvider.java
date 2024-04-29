@@ -33,7 +33,7 @@ public class PhoneixJdbcConnectionProvider implements JdbcConnectionProvider, Se
         this.jdbcOptions = jdbcOptions;
     }
 
-    public PhoneixJdbcConnectionProvider(JdbcConnectionOptions jdbcOptions, boolean namespaceMappingEnabled, boolean mapSystemTablesEnabled) {
+    public PhoneixJdbcConnectionProvider(JdbcConnectionOptions jdbcOptions, Boolean namespaceMappingEnabled, Boolean mapSystemTablesEnabled) {
         this.jdbcOptions = jdbcOptions;
         this.namespaceMappingEnabled = namespaceMappingEnabled;
         this.mapSystemTablesEnabled = mapSystemTablesEnabled;
@@ -94,10 +94,10 @@ public class PhoneixJdbcConnectionProvider implements JdbcConnectionProvider, Se
                     info.setProperty("password", password);
                 });
 
-                if (this.namespaceMappingEnabled  && this.mapSystemTablesEnabled) {
-                    info.setProperty("phoenix.schema.isNamespaceMappingEnabled", "true");
-                    info.setProperty("phoenix.schema.mapSystemTablesToNamespace", "true");
-                }
+//                if (this.namespaceMappingEnabled  && this.mapSystemTablesEnabled) {
+                info.setProperty("phoenix.schema.isNamespaceMappingEnabled", "true");
+                info.setProperty("phoenix.schema.mapSystemTablesToNamespace", "true");
+//                }
 
                 this.connection = driver.connect(this.jdbcOptions.getDbURL(), info);
 
