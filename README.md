@@ -1,10 +1,13 @@
-# flink-sql-connector-phoenix
+# flink1.17.2-sql-connector-phoenix
 
 ## 简介
 flink-sql-connector-phoenix 可以使用flink sql 读写phoenix
-## 特点
 
-本文迭代1.17.2  原文：https://github.com/gaogao110/flink-sql-connector-phoenix.git
+适用于CDH6.3.2 
+
+本文迭代flink 1.17.2 
+
+参考flink 1.14：https://github.com/gaogao110/flink-sql-connector-phoenix.git
 
 ## 原理
 基于flink-sql-connector-jdbc改造而成
@@ -96,3 +99,5 @@ phoenix-connector中拓展了
  
 ` insert into pv select student.sid as sid ,count(student.sid) as ucount from datagen left join student FOR SYSTEM_TIME AS OF datagen.proctime on student.sid = datagen.userid group by student.sid having student.sid is not null;
 `
+## 使用方法
+执行mvn install flink-sql-connector-phoenix-1.17-1.0-SNAPSHOT.jar 放到flink lib 下
