@@ -2,6 +2,7 @@
 
 ## 简介
 flink-sql-connector-phoenix 可以使用flink sql 读写phoenix
+
 适用于CDH6.3.2 
 ## 特点
 
